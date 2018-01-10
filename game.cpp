@@ -49,6 +49,13 @@ bool CGAME::playGame(int type, int mode)
 		result = checkKey(mode);
 		switch(result)
 		{
+			
+			//추가기능 : 키보드에서 ESC 입력시 게임종료 
+			case FINISH   : return false;
+			
+			
+			
+			
 			//오목시 종료 초기화면  
 			case FIVEMOK  : return false;
 			// 착수가 불가능한 곳은 그 이유를 알린다. 
