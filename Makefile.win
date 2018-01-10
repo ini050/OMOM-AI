@@ -1,0 +1,46 @@
+# Project: Omok
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = main.o draw.o omok.o game.o omokrule.o omokfactory.o omokai.o
+LINKOBJ  = main.o draw.o omok.o game.o omokrule.o omokfactory.o omokai.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib32" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib32" -static-libgcc -m32
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = Omok.exe
+CXXFLAGS = $(CXXINCS) -march=corei7-avx -mtune=core2 -m32
+CFLAGS   = $(INCS) -march=corei7-avx -mtune=core2 -m32
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+draw.o: draw.cpp
+	$(CPP) -c draw.cpp -o draw.o $(CXXFLAGS)
+
+omok.o: omok.cpp
+	$(CPP) -c omok.cpp -o omok.o $(CXXFLAGS)
+
+game.o: game.cpp
+	$(CPP) -c game.cpp -o game.o $(CXXFLAGS)
+
+omokrule.o: omokrule.cpp
+	$(CPP) -c omokrule.cpp -o omokrule.o $(CXXFLAGS)
+
+omokfactory.o: omokfactory.cpp
+	$(CPP) -c omokfactory.cpp -o omokfactory.o $(CXXFLAGS)
+
+omokai.o: omokai.cpp
+	$(CPP) -c omokai.cpp -o omokai.o $(CXXFLAGS)
