@@ -243,7 +243,11 @@ void CDRAW::infoKey()
 
 bool CDRAW::endMsg(int stone)
 {
- 
+ SetColor(GRAY);
+	for(int i = 0; i < sizeof(str) / sizeof(str[0]); i++)
+	{
+    	gotoxy((nX + SIZE + 1) * 2, nY + 4 + i);
+    	printf(str[i]);
 }
 
 // 바둑판과 돌을 그린다. 
