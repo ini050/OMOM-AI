@@ -241,13 +241,15 @@ void CDRAW::infoKey()
 }
 
 
+
 bool CDRAW::endMsg(int stone)
 {
- SetColor(GRAY);
-	for(int i = 0; i < sizeof(str) / sizeof(str[0]); i++)
-	{
-    	gotoxy((nX + SIZE + 1) * 2, nY + 4 + i);
-    	printf(str[i]);
+ 	const char *winner[] = {"    Èæµ¹ ½Â! ",
+							"    ¹éµ¹ ½Â! ",
+							"    ¹«½ÂºÎ"};
+	showMsg(stone + 3);
+	MessageBox(NULL, winner[stone], "¾Ë ¸²", MB_OK) == IDYES;
+
 }
 
 // ¹ÙµÏÆÇ°ú µ¹À» ±×¸°´Ù. 
