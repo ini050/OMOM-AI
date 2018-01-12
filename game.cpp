@@ -54,8 +54,6 @@ bool CGAME::playGame(int type, int mode)
 			case FINISH   : return false;
 			
 			
-			
-			
 			//오목시 종료 초기화면  
 			case FIVEMOK  : return false;
 			// 착수가 불가능한 곳은 그 이유를 알린다. 
