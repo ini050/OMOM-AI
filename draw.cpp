@@ -240,12 +240,11 @@ void CDRAW::infoKey()
 {
 }
 
-
 bool CDRAW::endMsg(int stone)
 {
- 	const char *winner[] = {"    흑돌 승! \n한 게임 더 하시겠습니까?     ",
-							"    백돌 승! \n한 게임 더 하시겠습니까?     ",
-							"    무승부! \n한 게임 더 하시겠습니까?"};
+ 	const char *winner[] = {"    흑돌 승! \n 한 게임 더 하시겠습니까?",
+							"    백돌 승! \n 한 게임 더 하시겠습니까?",
+							"    무승부!  \n 한 게임 더 하시겠습니까?"};
 	showMsg(stone + 3);
 	if(MessageBox(NULL, winner[stone], "알 림", MB_YESNO) == IDYES) return true;
 	else return false; 
