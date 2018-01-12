@@ -143,7 +143,6 @@ int CGAME::checkKey(int mode)
 		case RIGHT : ++dx; break;
 
         case DEL   : return PASS;
-        case ESC   : return FINISH;
         case ' '   : return pOmok[curStone]->placement(x, y, curStone);
         case 'r'   : 
         case 'R'   :
@@ -161,6 +160,9 @@ int CGAME::checkKey(int mode)
 	        	pOmok[(curStone + 1) % 2]->undo(); 
 			}
 			else return pOmok[curStone]->undo(); 
+			
+			case ESC   : return FINISH;
+			
         default    : break;
 	}
     pOmok[curStone]->setBoard(x, y);
