@@ -53,10 +53,9 @@ bool CGAME::playGame(int type, int mode)
 			//추가기능 : 키보드에서 ESC 입력시 게임종료 
 			case FINISH   : return false;
 			
-			//수정기능 : 게임 종료시 승자알림과 함께 새로운 게임을 할건지 팝업 알림 
-			case FIVEMOK  : return pDraw()->endMsg(curStone);
-			
-			
+			//수정기능 : 게임종료 메시지 YES,NO 출력 
+    		case FIVEMOK  : return pDraw()->endMsg(curStone);
+    		
 			// 착수가 불가능한 곳은 그 이유를 알린다. 
 			case OCCUPIED :
 			case SAMSAM   :
@@ -130,20 +129,21 @@ int CGAME::getKey()
 int CGAME::checkKey(int mode)
 {
     int ch, dx, dy;;
-
     if(isComputer) return pOmok[curStone]->placement(x, y, curStone);
 	else if(kbhit()) ch = getKey();
     else return 0;
-    
     dx = dy = 0;
     switch(ch)
     {
-    	case UP    : --dy; break;
+    	case ESC   : return FINISH;
+    	
+		case UP    : --dy; break;
 		case DOWN  : ++dy; break;
     	case LEFT  : --dx; break;
 		case RIGHT : ++dx; break;
 
-        case DEL   : return PASS;
+        
+		case DEL   : return PASS;
         case ' '   : return pOmok[curStone]->placement(x, y, curStone);
         case 'r'   : 
         case 'R'   :
@@ -162,7 +162,7 @@ int CGAME::checkKey(int mode)
 			}
 			else return pOmok[curStone]->undo(); 
 			
-			case ESC   : return FINISH;
+
 			
         default    : break;
 	}
