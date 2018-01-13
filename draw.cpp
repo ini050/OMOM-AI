@@ -246,7 +246,7 @@ bool CDRAW::endMsg(int stone)
 							"    백돌 승! \n 한 게임 더 하시겠습니까?",
 							"    무승부!  \n 한 게임 더 하시겠습니까?"};
 	showMsg(stone + 3);
-	if(MessageBox(NULL, winner[stone], "알 림", MB_YESNO) == IDYES) return true;
+	if(MessageBox(NULL, winner[stone], "알 림", MB_ICONQUESTION|MB_YESNO) == IDYES) return true;
 	else return false; 
 }
 
