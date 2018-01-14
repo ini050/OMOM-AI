@@ -51,9 +51,11 @@ bool CGAME::playGame(int type, int mode)
 		{
 			
 			//추가기능 : 키보드에서 ESC 입력시 게임종료 
+			//추가이유 : 기존 방식에서는 창의 x 버튼을 눌러 종료시키는 방법밖에 없어 불편함을 겪어 추가함
 			case FINISH   : return false;
 			
 			//수정기능 : 게임종료 메시지 YES,NO 출력 
+			//추가이유 : 게임종료시 게임종료가아닌 재게임을 원하여 수 
     		case FIVEMOK  : return pDraw()->endMsg(curStone);
     		
 			// 착수가 불가능한 곳은 그 이유를 알린다. 
