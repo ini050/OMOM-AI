@@ -55,7 +55,7 @@ bool CGAME::playGame(int type, int mode)
 			case FINISH   : return false;
 			
 			//수정기능 : 게임종료 메시지 YES,NO 출력 
-			//추가이유 : 게임종료시 게임종료가아닌 재게임을 원하여 수 
+			//추가이유 : 게임종료시 게임종료가아닌 재게임을 원하여 수정 
     		case FIVEMOK  : return pDraw()->endMsg(curStone);
     		
 			// 착수가 불가능한 곳은 그 이유를 알린다. 
