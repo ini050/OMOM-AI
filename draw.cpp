@@ -238,6 +238,21 @@ void CDRAW::showMsg(int msg)
 
 void CDRAW::infoKey()
 {
+	const char *str[] = {
+		"방  향  키 : 이  동",
+		"  SpaceBar  :돌 놓기",
+		" ESC : 게임 종료하기",
+		"    U      : 무르기  ",
+		" Delete : Pass  ",
+		" "
+	};
+	
+	SetColor(WHITE);
+	for(int i = 0; i < sizeof(str) / sizeof(str[0]); i++)
+	{
+    	gotoxy((nX + SIZE + 1) * 2, nY + 4 + i);
+    	printf(str[i]);
+	}
 }
 
 //messagebox 아이콘추가와 알림멘트 수정, 인자 MB_YESNO 로 수정  
