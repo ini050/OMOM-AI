@@ -83,9 +83,7 @@ int CDRAW::GetMenu(char *cTitle)
     
     const char *strTitle[] = {
     	"O M O K  G A M E",
-    	"고모쿠(GOMOKU) 룰",
     	"일  반(NORMAL) 룰",
-    	"렌  주(RENJU)  룰",
 		"그   만   하   기"
 	};
 	
@@ -94,10 +92,8 @@ int CDRAW::GetMenu(char *cTitle)
                            "  1. ",
                            "                         ",
                            "  2. ",
-                           "                         ",
-                           "  3. ",
-                           "                         ",
-                           "  4. "};
+                           "                         "
+                           };
 
     x = strlen(menu[1]);
     y = sizeof(menu) / sizeof(menu[0]);
@@ -240,14 +236,18 @@ void CDRAW::infoKey()
 {
 	const char *str[] = {
 		"방  향  키 : 이  동",
-		"  SpaceBar  :돌 놓기",
+		"",
+		" SpaceBar  :돌 놓기",
+		"",
 		" ESC : 게임 종료하기",
+		"",
 		"    U      : 무르기  ",
-		" Delete : Pass  ",
-		" "
+		"",
+		" Delete : 턴 넘기기  "
 	};
 	
-	SetColor(WHITE);
+	
+	SetColor(GRAY);
 	for(int i = 0; i < sizeof(str) / sizeof(str[0]); i++)
 	{
     	gotoxy((nX + SIZE + 1) * 2, nY + 4 + i);
