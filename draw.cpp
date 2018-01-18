@@ -231,7 +231,7 @@ void CDRAW::showMsg(int msg)
     printf("%s", str[msg]);
 }
 
-
+//게임 조작키 표시  
 void CDRAW::infoKey()
 {
 	const char *str[] = {
