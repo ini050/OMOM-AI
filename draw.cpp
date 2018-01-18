@@ -6,6 +6,7 @@ CDRAW *CDRAW::getInstance()
 	return &draw;
 }
 
+
 CDRAW::CDRAW()
 {
 	nX = (40 - SIZE - 1) / 2;
@@ -230,6 +231,7 @@ void CDRAW::showMsg(int msg)
     gotoxy((nX + SIZE + 1) * 2, nY);
     printf("%s", str[msg]);
 }
+
 
 //게임 조작키 표시  
 void CDRAW::infoKey()
