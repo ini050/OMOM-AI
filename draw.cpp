@@ -231,6 +231,7 @@ void CDRAW::showMsg(int msg)
     printf("%s", str[msg]);
 }
 
+
 //게임 조작키 표시  
 void CDRAW::infoKey()
 {
@@ -247,7 +248,7 @@ void CDRAW::infoKey()
 	};
 	
 	
-	SetColor(GRAY);
+	SetColor(WHITE);
 	for(int i = 0; i < sizeof(str) / sizeof(str[0]); i++)
 	{
     	gotoxy((nX + SIZE + 1) * 2, nY + 4 + i);
