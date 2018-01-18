@@ -240,6 +240,7 @@ void CDRAW::infoKey()
 {
 }
 
+//messagebox 아이콘추가와 알림멘트 수정, 인자 MB_YESNO 로 수정  
 bool CDRAW::endMsg(int stone)
 {
  	const char *winner[] = {"    흑돌 승! \n 한 게임 더 하시겠습니까?",
