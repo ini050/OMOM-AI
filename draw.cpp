@@ -129,10 +129,7 @@ int CDRAW::GetMenu()
     const char *strTitle[] = {
     	"    O M O K  G A M E",
     	"COMPUTER(BLACK) vs PLAYER",
-    	"PLAYER(BLACK) vs COMPUTER",
-    	"PLAYER vs PLAYER         ",
-		"흑 돌 만  놓 아 보 기    ",
-		"백 돌 만  놓 아 보 기    ",
+    	"PLAYER(BLACK) vs COMPUTER"
 	};
 	
     const char *menu[] = { "    ",
@@ -140,12 +137,8 @@ int CDRAW::GetMenu()
                            "  1. ",
                            "                              ",
                            "  2. ",
-                           "                              ",
-                           "  3. ",
-                           "                              ",
-                           "  4. ",
-                           "                              ",
-                           "  5. "};
+                           "                              "
+                           };
 
     x = strlen(menu[1]);
     y = sizeof(menu) / sizeof(menu[0]);
