@@ -83,8 +83,8 @@ int CDRAW::GetMenu(char *cTitle)
     
     const char *strTitle[] = {
     	"O M O K  G A M E",
-    	"일  반(NORMAL) 룰",
-		"그   만   하   기"
+    	"시  작   하   기",
+		"종  료   하   기" 
 	};
 	
     const char *menu[] = { "    ",
