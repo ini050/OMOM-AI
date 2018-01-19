@@ -81,6 +81,7 @@ int CDRAW::GetMenu(char *cTitle)
 {
     int x, y, n;
     
+     //프로젝트에 맞게 불필요한 메뉴 삭제와 변경
     const char *strTitle[] = {
     	"O M O K  G A M E",
     	"시   작  하   기",
@@ -126,6 +127,10 @@ int CDRAW::GetMenu()
 {
     int x, y, n;
     
+    // 지금 하는 프로젝트에서 필요없는 기존의 메뉴 삭제
+    // 3. PLAYER vs PLAYER , 
+    // 4. 흑,백 돌만 놓아보기  같은 메뉴 삭제 
+	 
     const char *strTitle[] = {
     	"    O M O K  G A M E",
     	"COMPUTER(BLACK) vs PLAYER",
